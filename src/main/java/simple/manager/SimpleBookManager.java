@@ -1,8 +1,8 @@
-package manager;
+package simple.manager;
 
 
-import book.Book;
-import book.Genre;
+import simple.book.Book;
+import simple.book.Genre;
 
 public class SimpleBookManager implements BookManager {
     private Book[] books;

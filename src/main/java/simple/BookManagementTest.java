@@ -1,7 +1,9 @@
-import book.EBook;
-import book.Genre;
-import book.PrintedBook;
-import manager.SimpleBookManager;
+package simple;
+
+import simple.book.EBook;
+import simple.book.Genre;
+import simple.book.PrintedBook;
+import simple.manager.SimpleBookManager;
 
 public class BookManagementTest {
     public static void main(String[] args) {
@@ -13,7 +15,7 @@ public class BookManagementTest {
         manager.addBook(new EBook("Fantasy Adventures", "Alice Wonderland", 10.99, Genre.FANTASY, 2.0));
         manager.addBook(new PrintedBook("The Science of Cooking", "Gordon Ramsay", 20.50, Genre.NONFICTION, 150));
 
-        // Display book details by title
+        // Display simple.book details by title
         System.out.println(manager.getBookDetails("Java Programming"));
         System.out.println(manager.getBookDetails("Unknown Title"));
 

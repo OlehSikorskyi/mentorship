@@ -1,4 +1,4 @@
-package book;
+package simple.book;
 
 
 public class EBook extends Book {
@@ -20,6 +20,6 @@ public class EBook extends Book {
     @Override
     public String getDetails() {
         return "EBook [Title: " + getTitle() + ", Author: " + getAuthor() + ", Price: " + getPrice() +
-                ", main.java.book.Genre: " + getGenre() + ", File Size: " + fileSize + " MB]";
+                ", main.java.simple.book.Genre: " + getGenre() + ", File Size: " + fileSize + " MB]";
     }
 }

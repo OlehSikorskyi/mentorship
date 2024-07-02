@@ -1,4 +1,4 @@
-package book;
+package extended.book;
 
 
 public abstract class Book {

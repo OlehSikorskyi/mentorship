@@ -1,4 +1,4 @@
-package book;
+package extended.book;
 
 
 public class PrintedBook extends Book {
@@ -20,6 +20,6 @@ public class PrintedBook extends Book {
     @Override
     public String getDetails() {
         return "PrintedBook [Title: " + getTitle() + ", Author: " + getAuthor() + ", Price: " + getPrice() +
-                ", main.java.book.Genre: " + getGenre() + ", Number of Pages: " + numPages + "]";
+                ", main.java.simple.book.Genre: " + getGenre() + ", Number of Pages: " + numPages + "]";
     }
 }
