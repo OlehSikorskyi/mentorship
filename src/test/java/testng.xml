@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="BookManagementSuite" parallel="classes" thread-count="4">
+    <test name="BookManagementTests">
+        <classes>
+            <class name="SimpleBookManagerTest"/>
+            <class name="SimpleBookManager2Test"/>
+            <class name="SimpleBookManager3Test"/>
+            <class name="SimpleBookManager4Test"/>
+        </classes>
+    </test>
+</suite>
