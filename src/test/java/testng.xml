@@ -3,10 +3,10 @@
 <suite name="BookManagementSuite" parallel="classes" thread-count="4">
     <test name="BookManagementTests">
         <classes>
-            <class name="SimpleBookManagerTest"/>
-            <class name="SimpleBookManager2Test"/>
-            <class name="SimpleBookManager3Test"/>
-            <class name="SimpleBookManager4Test"/>
+            <class name="unit.SimpleBookManagerTest"/>
+            <class name="unit.SimpleBookManager2Test"/>
+            <class name="unit.SimpleBookManager3Test"/>
+            <class name="unit.SimpleBookManager4Test"/>
         </classes>
     </test>
 </suite>
