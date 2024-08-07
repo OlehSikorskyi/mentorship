@@ -1,4 +1,4 @@
-package unit;
+package tests.unit;
 
 import extended.book.Book;
 import extended.book.EBook;

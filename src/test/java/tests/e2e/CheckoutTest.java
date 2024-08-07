@@ -1,4 +1,4 @@
-package e2e;
+package tests.e2e;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

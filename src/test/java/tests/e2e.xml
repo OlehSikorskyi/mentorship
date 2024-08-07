@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Swag Labs" parallel="tests" thread-count="4">
+    <test name="Swag LabsTests">
+        <classes>
+            <class name="tests.e2e.pageObject.LoginTest"/>
+            <class name="tests.e2e.pageObject.CheckoutTest"/>
+        </classes>
+    </test>
+</suite>
