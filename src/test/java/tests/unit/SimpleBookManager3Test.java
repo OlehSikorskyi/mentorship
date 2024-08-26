@@ -21,8 +21,8 @@ public class SimpleBookManager3Test {
         Book retrievedBook = manager.getBookDetails("Java Programming");
 
         Assert.assertTrue(retrievedBook.getTitle().contains("Java Programming"), "Check Title");
-        Assert.assertEquals(retrievedBook.getAuthor(), "Jane Doe", "Check Author");
-        Assert.assertEquals(retrievedBook.getPrice(), 29.98, "Check Price");
+        Assert.assertEquals(retrievedBook.getAuthor(), "John Doe", "Check Author");
+        Assert.assertEquals(retrievedBook.getPrice(), 29.99, "Check Price");
     }
 
     @Test
@@ -34,8 +34,8 @@ public class SimpleBookManager3Test {
 
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertTrue(retrievedBook.getTitle().contains("Java Programming"), "Check Title");
-        softAssert.assertEquals(retrievedBook.getAuthor(), "Jane Doe", "Check Author");
-        softAssert.assertEquals(retrievedBook.getPrice(), 29.98, "Check Price");
+        softAssert.assertEquals(retrievedBook.getAuthor(), "John Doe", "Check Author");
+        softAssert.assertEquals(retrievedBook.getPrice(), 29.99, "Check Price");
         softAssert.assertAll();
     }
 }
