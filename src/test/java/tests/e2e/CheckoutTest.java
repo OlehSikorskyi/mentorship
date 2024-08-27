@@ -1,5 +1,7 @@
 package tests.e2e;
 
+import io.qameta.allure.Issue;
+import io.qameta.allure.TmsLink;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -24,6 +26,8 @@ public class CheckoutTest {
 
 
     @Test(description = "Check that standard_user can purchase the products.")
+    @TmsLink("ID-25364")
+    @Issue("ID-5848")
     public void performanceGlitchLogin() {
         driver.get("https://www.saucedemo.com/");
         WebElement user_name = driver.findElement(By.id("user-name"));
