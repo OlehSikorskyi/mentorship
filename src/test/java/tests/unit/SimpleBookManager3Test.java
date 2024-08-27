@@ -22,13 +22,13 @@ public class SimpleBookManager3Test {
 
         Assert.assertTrue(retrievedBook.getTitle().contains("Java Programming"), "Check Title");
         Assert.assertEquals(retrievedBook.getAuthor(), "John Doe", "Check Author");
-        Assert.assertEquals(retrievedBook.getPrice(), 29.99, "Check Price");
+        Assert.assertEquals(retrievedBook.getPrice(), 29.98, "Check Price");
     }
 
     @Test
     public void testSoftAddAndGetBook () throws BookNotFoundException {
         System.out.println("Running test 'testSoftAddAndGetBook' in thread: " + Thread.currentThread().getName());
-        Book book = new EBook("Java Programming", "John Doe", 29.99, Genre.SCIENCE, 5.5);
+        Book book = new EBook("Java Programming", "John DoeWWW", 29.99, Genre.SCIENCE, 5.5);
         manager.addBook(book);
         Book retrievedBook = manager.getBookDetails("Java Programming");
 
