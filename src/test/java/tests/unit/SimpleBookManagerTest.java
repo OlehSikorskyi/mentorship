@@ -43,7 +43,7 @@ public class SimpleBookManagerTest {
     @Test(enabled = false)
     public void testAddAndGetBookIgnored() throws BookNotFoundException {
         logger.info("Running test 'testSoftAddAndGetBook' in thread: " + Thread.currentThread().getName());
-        book = new EBook("Java Programming", "John Doe", 29.99, Genre.SCIENCE, 5.5);
+        book = new EBook("Java Programming", "John Doe", 29.98, Genre.SCIENCE, 5.5);
         manager.addBook(book);
         Book retrievedBook = manager.getBookDetails("Java Programming");
         Assert.assertTrue(retrievedBook.getTitle().contains("Java Programming"));
@@ -53,7 +53,7 @@ public class SimpleBookManagerTest {
     @Test()
     public void testAddAndGetBookIgnored2() throws BookNotFoundException {
         logger.info("Running test 'testSoftAddAndGetBook' in thread: " + Thread.currentThread().getName());
-        book = new EBook("Java Programming", "John Doe", 29.99, Genre.SCIENCE, 5.5);
+        book = new EBook("Java Programming", "John Doeww", 29.99, Genre.SCIENCE, 5.5);
         manager.addBook(book);
         Book retrievedBook = manager.getBookDetails("Java Programming");
         Assert.assertTrue(retrievedBook.getTitle().contains("Java Programming"));
