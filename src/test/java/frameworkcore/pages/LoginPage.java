@@ -1,5 +1,6 @@
 package frameworkcore.pages;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -22,6 +23,7 @@ public class LoginPage extends BasePage {
         super(driver);
     }
 
+    @Step("Login with username {userEmail} and password {userPassword}")
     public void login(String userEmail, String userPassword) {
         userName.clear();
         userName.sendKeys(userEmail);

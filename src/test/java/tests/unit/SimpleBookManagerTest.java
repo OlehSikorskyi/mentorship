@@ -5,10 +5,13 @@ import extended.book.EBook;
 import extended.book.Genre;
 import extended.manager.AdvancedBookManager;
 import extended.manager.BookNotFoundException;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
 public class SimpleBookManagerTest {
+    private static final Logger logger = LogManager.getLogger(SimpleBookManagerTest.class);
     private AdvancedBookManager manager;
     Book book;
 
@@ -24,7 +27,7 @@ public class SimpleBookManagerTest {
 
     @Test
     public void testAddAndGetBook() throws BookNotFoundException {
-        System.out.println("Running test 'testSoftAddAndGetBook' in thread: " + Thread.currentThread().getName());
+        logger.info("Running test 'testSoftAddAndGetBook' in thread: " + Thread.currentThread().getName());
         book = new EBook("Java Programming", "John Doe", 29.99, Genre.SCIENCE, 5.5);
         manager.addBook(book);
         Book retrievedBook = manager.getBookDetails("Java Programming");
@@ -33,14 +36,14 @@ public class SimpleBookManagerTest {
 
     @Test(expectedExceptions = BookNotFoundException.class)
     public void testGetBookDetailsNotFound() throws BookNotFoundException {
-        System.out.println("Running test 'testSoftAddAndGetBook' in thread: " + Thread.currentThread().getName());
+        logger.info("Running test 'testSoftAddAndGetBook' in thread: " + Thread.currentThread().getName());
         manager.getBookDetails("Nonexistent Book");
     }
 
     @Test(enabled = false)
     public void testAddAndGetBookIgnored() throws BookNotFoundException {
-        System.out.println("Running test 'testSoftAddAndGetBook' in thread: " + Thread.currentThread().getName());
-        book = new EBook("Java Programming", "John Doe", 29.99, Genre.SCIENCE, 5.5);
+        logger.info("Running test 'testSoftAddAndGetBook' in thread: " + Thread.currentThread().getName());
+        book = new EBook("Java Programming", "John Doe", 29.98, Genre.SCIENCE, 5.5);
         manager.addBook(book);
         Book retrievedBook = manager.getBookDetails("Java Programming");
         Assert.assertTrue(retrievedBook.getTitle().contains("Java Programming"));
@@ -49,8 +52,8 @@ public class SimpleBookManagerTest {
     @Ignore
     @Test()
     public void testAddAndGetBookIgnored2() throws BookNotFoundException {
-        System.out.println("Running test 'testSoftAddAndGetBook' in thread: " + Thread.currentThread().getName());
-        book = new EBook("Java Programming", "John Doe", 29.99, Genre.SCIENCE, 5.5);
+        logger.info("Running test 'testSoftAddAndGetBook' in thread: " + Thread.currentThread().getName());
+        book = new EBook("Java Programming", "John Doeww", 29.99, Genre.SCIENCE, 5.5);
         manager.addBook(book);
         Book retrievedBook = manager.getBookDetails("Java Programming");
         Assert.assertTrue(retrievedBook.getTitle().contains("Java Programming"));
@@ -64,10 +67,10 @@ public class SimpleBookManagerTest {
     @AfterMethod
     public void tearDown() {
         try {
-            System.out.println("AfterMethod: Removing book " + book.getTitle());
+            logger.info("AfterMethod: Removing book " + book.getTitle());
             manager.removeBook(book.getTitle());
         } catch (Exception exception) {
-            System.out.println("AfterMethod: Book was not found.");
+            logger.info("AfterMethod: Book was not found.");
         }
     }
 }
