@@ -46,7 +46,7 @@ public class SimpleBookManagerTest {
         book = new EBook("Java Programming", "John Doe", 29.98, Genre.SCIENCE, 5.5);
         manager.addBook(book);
         Book retrievedBook = manager.getBookDetails("Java Programming");
-        Assert.assertTrue(retrievedBook.getTitle().contains("Java Programming Fail"));
+        Assert.assertTrue(retrievedBook.getTitle().contains("Java Programming"));
     }
 
     @Ignore
@@ -56,7 +56,7 @@ public class SimpleBookManagerTest {
         book = new EBook("Java Programming", "John Doeww", 29.99, Genre.SCIENCE, 5.5);
         manager.addBook(book);
         Book retrievedBook = manager.getBookDetails("Java Programming");
-        Assert.assertTrue(retrievedBook.getTitle().contains("Java Programming"));
+        Assert.assertTrue(retrievedBook.getTitle().contains("Java Programming Fail"));
     }
 
     @AfterClass
